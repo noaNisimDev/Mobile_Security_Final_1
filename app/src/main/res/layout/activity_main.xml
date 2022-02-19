@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="102dp"
-        android:text="Mono"
+        android:text="@string/mono"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/italicBtn" />
 
@@ -36,7 +36,7 @@
         android:layout_marginStart="99dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="34dp"
-        android:text="Bold"
+        android:text="@string/bold"
         app:layout_constraintEnd_toStartOf="@+id/italicBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/insertText" />
@@ -48,7 +48,7 @@
         android:layout_marginStart="99dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="34dp"
-        android:text="Strike"
+        android:text="@string/strike"
         app:layout_constraintEnd_toStartOf="@+id/monoBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boldBtn" />
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="102dp"
-        android:text="Italic"
+        android:text="@string/italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/insertText" />
 
@@ -80,7 +80,7 @@
         android:layout_marginTop="121dp"
         android:layout_marginEnd="135dp"
         android:enabled="false"
-        android:text="Copy ! "
+        android:text="@string/copy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -92,7 +92,7 @@
         android:layout_marginStart="158dp"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="159dp"
-        android:text="Formated Text:"
+        android:text="@string/formated_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/monoBtn" />
