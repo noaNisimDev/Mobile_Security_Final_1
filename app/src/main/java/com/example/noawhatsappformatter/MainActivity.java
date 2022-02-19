@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     String bold = "*";
     String italic = "_";
     String strike = "~";
-    String mono = "'''";
+    String mono = "```";
 
 
     @Override
@@ -90,11 +90,13 @@ public class MainActivity extends AppCompatActivity {
                 String ipAddress = getDeviceIpAddress();
                 String binaryIpAddress = stringToBinary(ipAddress);
                 String stangIpAddress = binaryToSteganography(binaryIpAddress);
+                //Debug
                 String binaryAfter = steganographyToBinary(stangIpAddress);
                 String ipAfter = binaryToString(binaryAfter);
                 Log.d("debug", "onClick: ipAddress: " + ipAddress);
                 Log.d("debug", "onClick: binaryIpAddress: " + binaryIpAddress);
                 Log.d("debug", "onClick: stangIpAddress: " + stangIpAddress);
+                //Debug
                 Log.d("debug", "onClick: binaryAfter: " + binaryAfter);
                 Log.d("debug", "onClick: ipAfter: " + ipAfter);
 
@@ -107,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     public void setFormattetText(String message, String sign) {
         TextView formattedText = (TextView) findViewById(R.id.formatedTxt);
         String text = sign + message + sign;
-        Log.d("bah", text);
+        Log.d("debug", text);
         formattedText.setText("");
         formattedText.setText(text);
     }
@@ -123,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
             bString += temp + " ";
         }
 
-        Log.d("TAG", bString);
+        Log.d("Debug", bString);
         return bString;
     }
 
@@ -147,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
     public String steganographyToBinary(@NonNull String steganographyCode) {
         String binary = "";
-        binary = steganographyCode.replaceAll("[a-zA-Z]+", "");
+        binary = steganographyCode.replaceAll("((\\''')*\\**~*_*[a-zA-Z]+\\**~*_*(\\''')*)", "");
         binary = binary.replaceAll(zero, "0");
         binary = binary.replaceAll(one, "1");
         binary = binary.replaceAll(space, " ");
